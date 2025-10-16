@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Devoir à la maison - Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style-bootstrap.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid p-0 site-wrapper">
+      <div class="container bg-white shadow-sm">
+        <!-- Header -->
+        <header
+          class="d-flex flex-column flex-md-row justify-content-between align-items-start py-3 px-3 header-custom"
+        >
+          <div class="mb-3 mb-md-0">
+            <img
+              src="img/logo_msp_Part.png"
+              alt="Logo"
+              class="img-fluid"
+              style="max-width: 365px"
+            />
+          </div>
+
+          <div class="search-wrapper">
+            <form
+              class="d-flex gap-2"
+              action="https://mon.service-public.fr/portail/faces/jsp/liste_res_tout.jsp"
+              method="get"
+            >
+              <input
+                type="text"
+                name="fullText"
+                class="form-control form-control-sm"
+                placeholder="Rechercher"
+                title="Rechercher"
+              />
+              <button
+                type="submit"
+                class="btn btn-sm btn-outline-secondary"
+                title="Lancer la recherche"
+              >
+                ok
+              </button>
+            </form>
+          </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-custom p-0">
+          <div class="container-fluid p-0">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+              <ul class="navbar-nav w-100 nav-custom">
+                <li class="nav-item flex-fill dropdown">
+                  <a
+                    class="nav-link dropdown-toggle text-center"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    Mon tableau de bord
+                  </a>
+                  <ul class="dropdown-menu w-100">
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >&gt; Mes liaisons de comptes</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">&gt; Mon calendrier</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">&gt; Mon suivi</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item flex-fill dropdown">
+                  <a
+                    class="nav-link dropdown-toggle text-center"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    Mes documents
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >&gt; Mon porte-documents</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">&gt; Mon bloc-notes</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item flex-fill dropdown">
+                  <a
+                    class="nav-link dropdown-toggle text-center"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    Mon profil
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">&gt; Mes coordonnées</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">&gt; Mes contacts</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">&gt; Mes options</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item flex-fill dropdown">
+                  <a
+                    class="nav-link dropdown-toggle text-center"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    Catalogue des services
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">&gt; Les démarches</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >&gt; Les formulaires CERFA</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >&gt; Les organismes partenaires</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >&gt; L'annuaire de l'administration</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >&gt; Le guide des droits et démarches</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="px-3 py-2 breadcrumb-custom">
+          <ol class="breadcrumb mb-0 small">
+            <li class="breadcrumb-item"><a href="#">Accueil</a></li>
+            <li class="breadcrumb-item active">&gt; Mon tableau de bord</li>
+          </ol>
+        </nav>
+
+        <!-- Main Section -->
+        <section class="row g-3 px-3 py-3">
+          <!-- Main Content -->
+          <main class="col-lg-8">
+            <h1 class="main-title mb-3">Mon tableau de bord</h1>
+            <p class="mb-4">
+              Découvrez ci-dessous ce que vous pouvez faire dans la rubrique «
+              Mon tableau de bord ».
+            </p>
+
+            <!-- Feature Cards -->
+            <div class="row g-3">
+              <article class="col-md-4">
+                <div class="card h-100 feature-card text-center">
+                  <div class="card-body">
+                    <a href="#" class="text-decoration-none">
+                      <img
+                        src="img/402_429_Liaisons.JPG"
+                        width="60"
+                        height="60"
+                        alt="Liaisons"
+                        class="mb-2"
+                      />
+                      <h6 class="card-title fw-bold text-primary">
+                        Mes liaisons de comptes
+                      </h6>
+                    </a>
+                    <ul class="list-unstyled text-start small mt-3">
+                      <li class="mb-2">
+                        Accédez d'un clic à vos comptes administratifs sans
+                        ressaisir vos identifiants et mots de passe.
+                      </li>
+                      <li>Gérez vos liaisons de comptes.</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <article class="col-md-4">
+                <div class="card h-100 feature-card text-center">
+                  <div class="card-body">
+                    <a href="#" class="text-decoration-none">
+                      <img
+                        src="img/605_403_418_picto_agenda.gif"
+                        width="60"
+                        height="60"
+                        alt="Calendrier"
+                        class="mb-2"
+                      />
+                      <h6 class="card-title fw-bold text-primary">
+                        Mon calendrier
+                      </h6>
+                    </a>
+                    <ul class="list-unstyled text-start small mt-3">
+                      <li class="mb-2">
+                        Notez et visualisez toutes vos échéances
+                        administratives.
+                      </li>
+                      <li>
+                        Recevez des alertes par courriel pour vos rappels
+                        d'échéances.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <article class="col-md-4">
+                <div class="card h-100 feature-card text-center">
+                  <div class="card-body">
+                    <a href="#" class="text-decoration-none">
+                      <img
+                        src="img/401_430_suivi.jpg"
+                        width="60"
+                        height="60"
+                        alt="Suivi"
+                        class="mb-2"
+                      />
+                      <h6 class="card-title fw-bold text-primary">Mon suivi</h6>
+                    </a>
+                    <ul class="list-unstyled text-start small mt-3">
+                      <li class="mb-2">
+                        Suivez l'avancement de vos démarches en ligne.
+                      </li>
+                      <li>Consultez les messages envoyés.</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </main>
+
+          <!-- Aside -->
+          <aside class="col-lg-4">
+            <!-- Astuces Card -->
+            <div class="card mb-3 aside-card">
+              <div class="card-header aside-header-blue text-white">
+                <h3 class="h6 mb-0 text-uppercase">Les astuces</h3>
+              </div>
+              <div class="card-body aside-body">
+                <ul class="list-unstyled small">
+                  <li>
+                    <a href="#" class="text-dark">
+                      Accédez depuis mon.service-public.fr à une nouvelle
+                      génération de démarches en ligne
+                    </a>
+                  </li>
+                </ul>
+                <div class="mt-3">
+                  <a href="#" class="text-danger fw-bold small"
+                    >Toutes les astuces</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Actualités Card -->
+            <div class="card aside-card">
+              <div class="card-header aside-header-orange text-white">
+                <h3 class="h6 mb-0 text-uppercase">Les actualités</h3>
+              </div>
+              <div class="card-body aside-body">
+                <ul class="list-unstyled small">
+                  <li class="mb-2">
+                    <a href="#" class="text-dark">
+                      <span class="text-muted fw-bold">22/10/2012</span> Que
+                      pensez-vous de MSP ?
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="text-dark">
+                      <span class="text-muted fw-bold">10/10/2012</span> Le
+                      Conseil général du Tarn vient de déployer, une nouvelle
+                      téléprocédure.
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="text-dark">
+                      <span class="text-muted fw-bold">30/07/2012</span> Une
+                      nouvelle démarche en ligne sur MSP
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="text-dark">
+                      <span class="text-muted fw-bold">15/06/2012</span> Accédez
+                      à votre déclaration de revenus depuis MSP
+                    </a>
+                  </li>
+                </ul>
+                <div class="mt-3">
+                  <a href="#" class="text-danger fw-bold small"
+                    >Toutes les actualités</a
+                  >
+                </div>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-custom text-white py-4 px-3">
+          <div class="row g-3">
+            <div class="col-6 col-md-auto text-center">
+              <a href="#" target="_blank">
+                <img
+                  src="img/logo-ojd.png"
+                  alt="logo du OJD"
+                  class="img-fluid"
+                  style="max-width: 80px"
+                />
+              </a>
+            </div>
+
+            <div class="col-6 col-md">
+              <p class="fw-bold small mb-2">Assistance et contact</p>
+              <ul class="list-unstyled footer-links">
+                <li>
+                  <a href="#" class="text-white-50 small">Plan du site</a>
+                </li>
+                <li><a href="#" class="text-white-50 small">Contact</a></li>
+                <li><a href="#" class="text-white-50 small">Aide</a></li>
+                <li>
+                  <a href="#" class="text-white-50 small"
+                    >Questions fréquentes</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-md">
+              <p class="fw-bold small mb-2">Informations légales</p>
+              <ul class="list-unstyled footer-links">
+                <li>
+                  <a href="#" class="text-white-50 small">Mentions légales</a>
+                </li>
+                <li>
+                  <a href="#" class="text-white-50 small"
+                    >Conditions générales d'utilisation</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white-50 small"
+                    >Répertoire des informations publiques</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-md">
+              <p class="fw-bold small mb-2">Qualité de service</p>
+              <ul class="list-unstyled footer-links">
+                <li>
+                  <a href="#" class="text-white-50 small">Accessibilité</a>
+                </li>
+                <li><a href="#" class="text-white-50 small">Sécurité</a></li>
+                <li>
+                  <a href="#" class="text-white-50 small">Engagement qualité</a>
+                </li>
+                <li>
+                  <a href="#" class="text-white-50 small">Statistiques</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-md">
+              <p class="fw-bold small mb-2">Partenariat</p>
+              <ul class="list-unstyled footer-links">
+                <li>
+                  <a href="#" class="text-white-50 small"
+                    >Nos organismes partenaires</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white-50 small"
+                    >Devenir partenaire ?</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="text-center mt-4 pt-3 border-top border-white border-opacity-25"
+          >
+            <p class="small mb-0">
+              <a href="#" class="text-white-50 text-decoration-none">
+                Tous droits réservés - Direction Générale de Modernisation de
+                l'Etat - 2012
+              </a>
+              |
+              <a href="#" class="text-white-50 text-decoration-none">
+                A propos de mon.service-public.fr
+              </a>
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,484 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background: #f0f4f8;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px 20px;
+  background: linear-gradient(to bottom, #f8f9fb 0%, #eef2f7 100%);
+  border-bottom: 3px solid #d0dce8;
+}
+
+header img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#recherche_conteneur {
+  margin-top: 5px;
+}
+
+#recherche_conteneur form {
+  display: flex;
+  gap: 5px;
+}
+
+#rechercheInput {
+  padding: 6px 10px;
+  border: 1px solid #b8c5d3;
+  border-radius: 3px;
+  width: 180px;
+  font-size: 13px;
+}
+
+#ok_recherche {
+  padding: 6px 15px;
+  background: #e8eef5;
+  border: 1px solid #b8c5d3;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+#ok_recherche:hover {
+  background: #d5e1ed;
+}
+
+/* Navigation */
+nav {
+  background: linear-gradient(to bottom, #e8f2fb 0%, #d8ebf8 100%);
+  border-bottom: 1px solid #c0d8eb;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+nav > ul > li {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #c8dce9;
+}
+
+nav > ul > li:last-child {
+  border-right: none;
+}
+
+nav > ul > li > a {
+  display: block;
+  padding: 12px 10px;
+  color: #006699;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+  background: #d0e5f5;
+  text-decoration: none;
+}
+
+/* Dropdown submenu */
+nav > ul > li > ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #c0d8eb;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  padding: 15px;
+  min-width: 200px;
+}
+
+nav > ul > li:hover > ul {
+  display: block;
+}
+
+nav > ul > li > ul li {
+  text-align: left;
+  padding: 5px 0;
+}
+
+nav > ul > li > ul li a {
+  color: #006699;
+  font-size: 13px;
+}
+
+.flecheActive {
+  display: none;
+}
+
+/* Breadcrumb */
+.container > ul {
+  display: flex;
+  padding: 10px 20px;
+  background: #f8fafb;
+  border-bottom: 1px solid #e0e6eb;
+  font-size: 12px;
+}
+
+.container > ul li {
+  margin-right: 5px;
+}
+
+.container > ul li a {
+  color: #0066cc;
+}
+
+/* Section Layout */
+section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Main Content */
+main h1 {
+  background: linear-gradient(to bottom, #0a7cb5 0%, #085a87 100%);
+  color: white;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  border-radius: 3px;
+}
+
+main > div:first-of-type {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Feature Cards Container */
+main > div:last-of-type {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+main > div:last-of-type > div {
+  background: #f6f9fc;
+  border: 1px solid #d5e3f0;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+}
+
+main > div:last-of-type > div a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #006699;
+  font-weight: bold;
+  font-size: 13px;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+main > div:last-of-type > div a:hover {
+  color: #004d7a;
+}
+
+main > div:last-of-type > div img {
+  display: block;
+}
+
+main > div:last-of-type > div ul {
+  text-align: left;
+  margin-top: 10px;
+}
+
+main > div:last-of-type > div ul li {
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  position: relative;
+}
+
+main > div:last-of-type > div ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #006699;
+}
+
+/* Aside */
+aside > div {
+  margin-bottom: 15px;
+  border: 1px solid #d5e3f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+aside > div:first-child h3 {
+  background: linear-gradient(to bottom, #0a7cb5 0%, #085a87 100%);
+  color: white;
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+aside > div:last-child h3 {
+  background: linear-gradient(to bottom, #c84a2f 0%, #a03520 100%);
+  color: white;
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+aside > div ul {
+  padding: 15px;
+  background: #f9fbfd;
+}
+
+aside > div ul li {
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+aside > div ul li a {
+  color: #333;
+}
+
+aside > div ul li .date {
+  color: #888;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+aside > div > div:last-child {
+  padding: 10px 15px;
+  background: white;
+  border-top: 1px solid #e0e8f0;
+}
+
+aside > div > div:last-child a {
+  color: #c84a2f;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to bottom, #0a7cb5 0%, #085a87 100%);
+  color: white;
+  padding: 20px;
+}
+
+footer > div:first-child > ul {
+  display: grid;
+  grid-template-columns: auto repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+footer > div:first-child > ul > li:first-child {
+  display: flex;
+  align-items: flex-start;
+}
+
+footer > div:first-child > ul > li p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+footer > div:first-child > ul > li ul li {
+  margin-bottom: 5px;
+}
+
+footer > div:first-child > ul > li ul li a {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+}
+
+footer > div:first-child > ul > li ul li a:hover {
+  color: white;
+}
+
+footer > div:last-child {
+  text-align: center;
+  font-size: 11px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+footer > div:last-child a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* RESPONSIVE - Mobile Layout */
+@media (max-width: 768px) {
+  .container {
+    margin: 0;
+    box-shadow: none;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  header > div:first-child {
+    text-align: center;
+  }
+
+  header img {
+    width: 280px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  #recherche_conteneur {
+    margin-top: 0;
+  }
+
+  #rechercheInput {
+    flex: 1;
+    width: auto;
+  }
+
+  /* Mobile Navigation - Vertical Stack */
+  nav > ul {
+    flex-direction: column;
+  }
+
+  nav > ul > li {
+    border-right: none;
+    border-bottom: 1px solid #c8dce9;
+  }
+
+  nav > ul > li:last-child {
+    border-bottom: none;
+  }
+
+  nav > ul > li > a {
+    text-align: left;
+    padding: 15px 20px;
+  }
+
+  nav > ul > li > ul {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background: #e8f2fb;
+    padding: 10px 20px 10px 40px;
+  }
+
+  nav > ul > li:hover > ul {
+    display: none; /* Hide on mobile, would need JS for toggle */
+  }
+
+  /* Breadcrumb */
+  .container > ul {
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  /* Section - Single Column */
+  section {
+    grid-template-columns: 1fr;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  /* Main Content - Single Column Cards */
+  main > div:last-of-type {
+    grid-template-columns: 1fr;
+  }
+
+  main h1 {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  /* Footer - Simplified */
+  footer {
+    padding: 15px;
+  }
+
+  footer > div:first-child > ul {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  footer > div:first-child > ul > li:first-child {
+    justify-content: center;
+  }
+
+  footer > div:last-child {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header img {
+    width: 220px;
+  }
+
+  #rechercheInput {
+    font-size: 12px;
+  }
+
+  nav > ul > li > a {
+    font-size: 13px;
+    padding: 12px 15px;
+  }
+
+  main > div:last-of-type > div {
+    padding: 12px;
+  }
+
+  footer {
+    font-size: 11px;
+  }
+}
